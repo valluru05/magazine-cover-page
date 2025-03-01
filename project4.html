@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 30px;
+            background-color: #f0f0f0;
+            
+        }
+        .magazine-cover {
+            position: relative;
+            width: 530px;
+            height: 771px;
+            border: 4px solid red;
+            background-color: #dae9e2;
+            box-shadow:4px 4px 40px rgb(63, 63, 63);
+        }
+
+        .container {
+            position: relative;
+            width: 500px; /* Adjust width */
+            height: auto;
+            
+        }
+        .vogue-text {
+            position: absolute;
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 120px;
+            font-family: 'Playfair Display';
+            font-weight: bold;
+            text-shadow: 0px 1px 1px black;
+            color: rgba(255, 0, 0, 0.5); /* Stylish faded effect */
+            z-index: 1; /* Lower z-index so it goes behind */
+        }
+        .model-image {
+            position: relative;
+            z-index: 2; /* Higher z-index so it stays above text */
+            width: 100%;
+            text-shadow:4px 10px 50px rgb(63, 63, 63);
+        }
+        
+        .text-block-right{
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            font-family: 'High Tower Text';
+            font-size: 20px;
+            color: black;
+            max-width: 40%;
+            line-height: 1.4;
+            z-index: 3;
+        }
+        .text-block-left{
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            font-family: 'High Tower Text';
+            font-size: 20px;
+            color: black;
+            max-width: 40%;
+            line-height: 1.4;
+            z-index: 3;
+
+        }
+        .highlight {
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Rockwell Extra Bold';
+            color:goldenrod;
+            text-shadow: 2px 2px 2px black;
+            z-index: 3;
+            
+        }
+        .style-show {
+            position: absolute;
+            bottom: 0%;
+            right: 5%;
+            font-family: 'Playfair Display';
+            font-size: 50px;
+            font-weight: bold;
+            color:rgba(255, 0, 0, 0.5);
+            text-shadow: 2px 2px 2px black;
+            z-index: 3;
+        }
+        .Subscribe {
+            position: absolute;
+            bottom: 0%;
+            right: 20%;
+            background: #c90606;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 50px;    
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-cover">
+        <div class="container">
+            <div class="vogue-text">VOGUE</div>
+            <img src="your_image-removebg-preview_enhanced.png" alt="Model Cover" class="model-image">
+        </div>
+        
+        <div class="text-block-right">
+            <p>Best of <span class="highlight"><strong>Cool</strong></span>
+            Specifics are important. It's the simple things that make a difference in your taste.</p><br><br>
+            <p><span class="highlight"><strong>PULS</strong></span><br>
+            Fashion is the armor to survive the reality of everyday.</p>
+        </div>
+        <div class="text-block-left">
+            <p><span class="highlight"><strong>STYLE</strong></span>
+            "Red is a powerful colour, it's the colour of passion, of energy, of love."</p>
+
+        </div>
+
+        <h2 class="style-show">"Style Show"</h2>
+
+        <button class="Subscribe" onclick="alert('Successfully Subscribe!')">Subscribe!</button>
+
+    </div>
+</body>
+</html>
